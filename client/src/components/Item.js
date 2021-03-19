@@ -55,7 +55,6 @@ function Item(props) {
         setIsOpen(false);
     }
     const createChecklist = (type) => {
-        console.log(props.item)
         props.editList(props.item.id, type, checkList)
     }
 
@@ -71,12 +70,12 @@ function Item(props) {
     useEffect(() => {
         if(props.item.duration) {
             setPercentage((count / props.item.duration * 100).toString())
-            if(count >= props.item.duration) {
+            if(props.item.duration && count >= props.item.duration) {
                 setCompleted(true)
             }
         } else if(props.item.checklist) {
             setPercentage((count / props.item.checklist.length * 100).toString())
-            if(count >= props.item.duration) {
+            if(props.item.checklist.length > 0 && count >= props.item.checklist.length) {
                 setCompleted(true)
             }
         }
@@ -121,7 +120,7 @@ function Item(props) {
                         <PauseIcon fontSize="small"/>
                          : null
                     }
-                    { props.item.duration && completed ?
+                    { completed ?
                         <CheckIcon  onClick={startCount} fontSize="small"/> : null
                     }
                     <DeleteForeverIcon fontSize="small" onClick={() => deleteItem(props.item.id)}/>

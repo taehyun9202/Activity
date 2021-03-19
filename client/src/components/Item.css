@@ -1,0 +1,142 @@
+.item {
+    margin: 5px 0px;
+    position: relative;
+}
+
+.item .header {
+    position: relative;
+    height: 50px;
+    display: flex;
+    z-index: 2;
+    background: transparent;
+}
+
+.item .header svg {
+    position: relative;
+    top: 0px;
+    height: 50px;
+    width: 49px;
+    cursor: pointer;
+    border-right: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.item .header svg:hover {
+    opacity: 0.8;
+}
+
+.item .header h3 {
+    position: relative;
+    top: -6px;
+    left: 8px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.item .header .bar {
+    position: absolute;
+    left: 50px;
+    top: -20px;
+    height: 50px;
+    opacity: 1;
+    z-index: 1;
+}
+
+.item .header .bar::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0.7;
+    background-color: inherit;
+    width: 249px;
+    height: 50px;
+    opacity: 0.4;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.duration {
+    background-color: white;
+    opacity: 0.7;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 2px;
+    position: relative;
+    left: 10px;
+    top: -2px;
+
+}
+
+.item .content {
+    position: relative;
+    top: 0px;
+    padding: 1px 10px;
+}
+
+.item .content .buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.item .content .buttons svg {
+    cursor: pointer;
+}
+
+.ReactModal__Content {
+    z-index: 1000;
+}
+
+
+.modalHeader {
+    position: relative;
+    top: -18px;
+    left: -18px;
+    width: calc(100% - 5px);
+    padding: 20px 20px;
+}
+
+.modalHeader_1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modalHeader_1 .modalHeaderButtons {
+    margin-top: 20px;
+}
+
+.modalHeader_1 .modalHeaderButtons button {
+    height: 30px;
+    margin-left: 10px;
+}
+
+.modalHeader_2 {
+    position: relative;
+    margin-top: -20px;
+    padding-bottom: 40px;
+}
+
+.modalHeader_2 input {
+    position: absolute;
+    margin-top: -5px;
+    width: calc(100% - 10px);
+    height: 30px;
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+
+.checklists input {
+    width: calc(100% - 10px);
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #333;
+}
+
+
+.checklists form svg {
+    position: relative;
+    top: -23px;
+    left: calc(100% - 27px);
+    cursor: pointer;
+}
